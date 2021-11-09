@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        /* my version of the stack */
+
+        class Stack{
+            constructor(){
+                this.arr=[];
+                this.index=-1;
+            }
+            pop(){
+                let arrItem= this.arr[this.index];
+                if(arrItem){
+                    this.index--;
+                    return arrItem;
+                }
+                return " THE ARRAY IS EMPTY :-( "
+            }
+            push(item){
+                this.index++;
+                this.arr[this.index]=item;
+            }
+            peek(){
+                let arrItem=this.arr[this.index];
+                if(arrItem){
+                    return arrItem;
+                };
+                return " NOTHING TO SHOW BECAUSE THE ARRAY IS EMPTY"
+            }
+            size(){
+                return this.index+1;
+            }
+
+        }
+        const theStack=new Stack();
+        theStack.push("X");
+        console.log(theStack);
+        console.log(theStack.size());
+        console.log(theStack.peek());
+        theStack.pop();
+        console.log(theStack);
+        console.log(theStack.size());
+        console.log(theStack.peek());
+        /* the queue class(data structure) has enque,deque,clear,size,isempty,front */
+        class Queue{
+            constructor(){
+                this.elements=[];
+            }
+            enqueue(element){
+                this.elements.push(element);
+            }
+            dequeue(){
+                return this.elements.shift()
+            }
+            clear(){
+                this.elements=[];
+            }
+            size(){
+                this.elements.length;
+            }
+            isEmpty(){
+                return this.elements.length==0
+            }
+            front(){
+                return this.elements[0];
+            }
+            print(){
+                console.log(this.elements);
+            }
+        }
+        const ticketsQueue=new Queue;
+        ticketsQueue.enqueue('Vhulenda');
+        ticketsQueue.enqueue('Ngelekanyo');
+        ticketsQueue.enqueue('Mulinda');
+        ticketsQueue.print();
+        console.log(ticketsQueue.dequeue());
+
+    </script>
+</body>
+</html>
