@@ -8,10 +8,7 @@
 </head>
 <body>
     <script>
-
-
         /* my version of the stack */
-
         class Stack{
             constructor(){
                 this.arr=[];
@@ -39,7 +36,6 @@
             size(){
                 return this.index+1;
             }
-
         }
         const theStack=new Stack();
         theStack.push("X");
@@ -83,7 +79,20 @@
         ticketsQueue.enqueue('Mulinda');
         ticketsQueue.print();
         console.log(ticketsQueue.dequeue());
-
+        function linkedList(){
+            var node=function(element){
+                this.element=element;
+                this.next=null
+            }
+            /*
+            {
+                element:element,
+                next: { element:element2, next:value2}
+            }
+            */
+            var head=null;
+            var length=0;
+        }
     </script>
 </body>
 </html>
